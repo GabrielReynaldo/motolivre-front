@@ -8,7 +8,7 @@
 .form{
     width: 25rem;
     margin: auto;
-    background-color:rgb(235, 235, 235);
+    background-color:rgb(206, 203, 203);
     padding: 4rem 1rem;
     border-radius: 1rem;
 }
@@ -29,11 +29,12 @@ img{
     width: 100%;
     margin-top: 2rem;
     color: black;
+    
 }
 
 button{
     margin-top: 1.5rem;
-    color: black;
+
 }
 .texto{
     color: black;
