@@ -1,4 +1,15 @@
-<div class="container"><div class="mat-elevation-z8">
+<div class="container">
+
+  <h1 ><i><font face="Castellar">Estabelecimentos</font></i></h1>
+
+  
+  
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+  
+  <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
       <ng-container matColumnDef="position">
@@ -13,7 +24,7 @@
   
       <ng-container matColumnDef="weight">
         <th mat-header-cell *matHeaderCellDef> CPF </th>
-        <td mat-cell *matCellDef="let element"> {{element.cpfcnpj}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
       </ng-container>
   
       <ng-container matColumnDef="symbol">
@@ -30,9 +41,13 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+    <mat-paginator [pageSizeOptions]="[1,5, 10, 20]"
                    showFirstLastButtons 
                    aria-label="Select page of periodic elements">
     </mat-paginator>
+    
   </div>
+ 
   </div>
+  <br>
+  <button mat-stroked-button color="black" class="mat-elevation-z10"><b>Novo Estabelecimento</b></button>

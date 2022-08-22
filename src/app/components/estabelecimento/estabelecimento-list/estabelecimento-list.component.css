@@ -6,3 +6,19 @@
 table {
     width: 100%;
   }
+  mat-form-field{
+    width: 100%;
+  }
+  button{
+    margin-left: 82.5%;
+    margin-bottom: 2rem;
+    background-color: white;
+    color: black
+   
+  }
+  h1{
+    width: 100%;
+    border: 1cm;
+    color: aquamarine;
+    
+  }
