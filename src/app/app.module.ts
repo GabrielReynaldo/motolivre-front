@@ -35,6 +35,7 @@ import { EstabelecimentoListComponent } from './components/estabelecimento/estab
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { EstabelecimentoCreateComponent } from './components/estabelecimento/estabelecimento-create/estabelecimento-create.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     EstabelecimentoListComponent,
-    LoginComponent
+    LoginComponent,
+    EstabelecimentoCreateComponent
   ],
   imports: [
     BrowserModule,
