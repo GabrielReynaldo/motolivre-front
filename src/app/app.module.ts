@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { EstabelecimentoCreateComponent } from './components/estabelecimento/estabelecimento-create/estabelecimento-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { EstabelecimentoUpdateComponent } from './components/estabelecimento/estabelecimento-update/estabelecimento-update.component';
 
 
 @NgModule({ 
@@ -47,7 +48,7 @@ import { NgxMaskModule } from 'ngx-mask';
     HeaderComponent,
     EstabelecimentoListComponent,
     LoginComponent, 
-    EstabelecimentoCreateComponent
+    EstabelecimentoCreateComponent, EstabelecimentoUpdateComponent
   ],
   imports: [
     BrowserModule,
