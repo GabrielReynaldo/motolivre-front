@@ -23,3 +23,9 @@ table {
     color: aquamarine;
     
   }
+  .edit{
+    color:rgb(15, 12, 235)
+  }
+  .delete{
+    color: red;
+  }
