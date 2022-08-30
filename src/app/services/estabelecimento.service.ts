@@ -14,4 +14,7 @@ export class EstabelecimentoService {
   findAll(): Observable<Estabelecimento[]> {
     return this.http.get<Estabelecimento[]>(`${API_CONFIG.baseUrl}/estabelecimentos`);
   }
+  create(estabelecimento: Estabelecimento):Observable<Estabelecimento>{
+    return this.http.post<Estabelecimento>(`${API_CONFIG.baseUrl}/estabelecimentos`, estabelecimento);
+  }
 }

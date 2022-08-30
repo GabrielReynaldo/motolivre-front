@@ -9,42 +9,68 @@
         <br>
         <br>
         <section class="section">
-            <mat-checkbox class="margin">Administrador</mat-checkbox>
-            <mat-checkbox class="margin">Motoboy</mat-checkbox>
-            <mat-checkbox class="margin">Estabelecimento</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin">Administrador</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" class="margin">Motoboy</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin">Estabelecimento</mat-checkbox>
             
         </section>
 
         
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Nome</mat-label>
-              <input matInput placeholder="EX... Gabriel">
+              <input 
+              [(ngModel)]="estabelecimento.nome"
+              name="nome"
+              [formControl]="nome"
+              required
+              matInput 
+              placeholder="EX... Gabriel"
+              maxlength="50">
               <mat-icon matSuffix>badge</mat-icon>
               
             </mat-form-field>
             
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>CPF</mat-label>
-              <input matInput placeholder="EX... 000.000.000-00">
+              <input 
+              [(ngModel)]="estabelecimento.cpf"
+              name="cpf"
+              [formControl]="cpf"
+              required
+              matInput 
+              placeholder="EX... 000.000.000-00"
+              mask="000.000.000-00">
               <mat-icon matSuffix>verified user</mat-icon>
               
             </mat-form-field>
          
             <mat-form-field class="fullWidth" appearance="legacy">
-              <mat-label>E-mail</mat-label>
-              <input matInput placeholder="EX... fulano@gmail.com">
+              <mat-label>E-mail</mat-label> 
+              <input
+              [(ngModel)]="estabelecimento.email"
+              name="email" 
+              [formControl]="email"
+              required
+              matInput 
+              placeholder="EX... fulano@gmail.com">
               <mat-icon matSuffix>alternate_email</mat-icon>
               
             </mat-form-field>
          
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Senha</mat-label>
-              <input matInput placeholder="EX... 1234">
+              <input
+              [(ngModel)]="estabelecimento.senha"
+              name="senha"
+              [formControl]="senha"
+              required="password"
+              matInput 
+              placeholder="EX... 1234">
               <mat-icon matSuffix>vpn_key</mat-icon>
               
             </mat-form-field>
-            <button class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Cadastrar</button>
-            <button class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
+            <button (click)="create()" [disabled] ="!validaCampos()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Cadastrar</button>
+            <button routerLink="../" class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
           <br>
     </form>
     <br>
