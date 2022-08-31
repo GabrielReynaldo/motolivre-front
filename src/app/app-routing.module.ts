@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { EstabelecimentoCreateComponent } from './components/estabelecimento/estabelecimento-create/estabelecimento-create.component';
+import { EstabelecimentoDeleteComponent } from './components/estabelecimento/estabelecimento-delete/estabelecimento-delete.component';
 import { EstabelecimentoListComponent } from './components/estabelecimento/estabelecimento-list/estabelecimento-list.component';
 import { EstabelecimentoUpdateComponent } from './components/estabelecimento/estabelecimento-update/estabelecimento-update.component';
 
@@ -17,7 +18,8 @@ const routes: Routes = [
 
       {path: 'estabelecimentos', component: EstabelecimentoListComponent},
       {path: 'estabelecimentos/create', component: EstabelecimentoCreateComponent},
-      {path: 'estabelecimentos/update/:id', component: EstabelecimentoUpdateComponent}
+      {path: 'estabelecimentos/update/:id', component: EstabelecimentoUpdateComponent},
+      {path: 'estabelecimentos/delete/:id', component: EstabelecimentoDeleteComponent}
 
       
     ]
