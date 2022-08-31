@@ -38,6 +38,7 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { EstabelecimentoCreateComponent } from './components/estabelecimento/estabelecimento-create/estabelecimento-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { EstabelecimentoUpdateComponent } from './components/estabelecimento/estabelecimento-update/estabelecimento-update.component';
+import { EstabelecimentoDeleteComponent } from './components/estabelecimento/estabelecimento-delete/estabelecimento-delete.component';
 
 
 @NgModule({ 
@@ -48,7 +49,7 @@ import { EstabelecimentoUpdateComponent } from './components/estabelecimento/est
     HeaderComponent,
     EstabelecimentoListComponent,
     LoginComponent, 
-    EstabelecimentoCreateComponent, EstabelecimentoUpdateComponent
+    EstabelecimentoCreateComponent, EstabelecimentoUpdateComponent, EstabelecimentoDeleteComponent
   ],
   imports: [
     BrowserModule,
