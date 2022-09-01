@@ -1,7 +1,7 @@
 <div class="comtainer mat-elevation-z8" >
     <form class="form">
       <br>
-        <h1 class="fullWidth">Atualizar Estabelecimento</h1>
+        <h1 class="fullWidth">Atualizar Motoboy</h1>
         <br>
         <img class="fullWidth" src="assets/img/loginusuario.svg" alt="Help Desk Dicas de um DEV">
 
@@ -10,8 +10,8 @@
         <br>
         <section class="section">
             <mat-checkbox (click)="addPerfil(0)" class="margin">Administrador</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(1)"  class="margin">Motoboy</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(2)" [checked]="true" class="margin">Estabelecimento</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)"  [checked]="true" class="margin">Motoboy</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)"  class="margin">Estabelecimento</mat-checkbox>
             
         </section>
 
@@ -19,7 +19,7 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Nome</mat-label>
               <input 
-              [(ngModel)]="estabelecimento.nome"
+              [(ngModel)]="motoboy.nome"
               name="nome"
               [formControl]="nome"
               required
@@ -33,7 +33,7 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>CPF</mat-label>
               <input 
-              [(ngModel)]="estabelecimento.cpf"
+              [(ngModel)]="motoboy.cpf"
               name="cpf"
               [formControl]="cpf"
               required
@@ -47,7 +47,7 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>E-mail</mat-label> 
               <input
-              [(ngModel)]="estabelecimento.email"
+              [(ngModel)]="motoboy.email"
               name="email" 
               [formControl]="email"
               required
@@ -60,7 +60,7 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Senha</mat-label>
               <input
-              [(ngModel)]="estabelecimento.senha"
+              [(ngModel)]="motoboy.senha"
               name="senha"
               [formControl]="senha"
               required="password"

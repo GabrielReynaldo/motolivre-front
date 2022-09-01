@@ -8,6 +8,10 @@ import { EstabelecimentoUpdateComponent } from './components/estabelecimento/est
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MotoboyCreateComponent } from './components/motoboy/motoboy-create/motoboy-create.component';
+import { MotoboyDeleteComponent } from './components/motoboy/motoboy-delete/motoboy-delete.component';
+import { MotoboyListComponent } from './components/motoboy/motoboy-list/motoboy-list.component';
+import { MotoboyUpdateComponent } from './components/motoboy/motoboy-update/motoboy-update.component';
 import { NavComponent } from './components/nav/nav.component';
 
 const routes: Routes = [
@@ -19,7 +23,13 @@ const routes: Routes = [
       {path: 'estabelecimentos', component: EstabelecimentoListComponent},
       {path: 'estabelecimentos/create', component: EstabelecimentoCreateComponent},
       {path: 'estabelecimentos/update/:id', component: EstabelecimentoUpdateComponent},
-      {path: 'estabelecimentos/delete/:id', component: EstabelecimentoDeleteComponent}
+      {path: 'estabelecimentos/delete/:id', component: EstabelecimentoDeleteComponent},
+
+
+      {path: 'motoboy', component: MotoboyListComponent},
+      {path: 'motoboy/create', component: MotoboyCreateComponent},
+      {path: 'motoboy/update/:id', component: MotoboyUpdateComponent},
+      {path: 'motoboy/delete/:id', component: MotoboyDeleteComponent}
 
       
     ]

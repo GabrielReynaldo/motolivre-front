@@ -1,7 +1,7 @@
 <div class="comtainer mat-elevation-z8" >
     <form class="form">
       <br>
-        <h1 class="fullWidth">Atualizar Estabelecimento</h1>
+        <h1 class="fullWidth">Deletar Motoboy</h1>
         <br>
         <img class="fullWidth" src="assets/img/loginusuario.svg" alt="Help Desk Dicas de um DEV">
 
@@ -9,9 +9,9 @@
         <br>
         <br>
         <section class="section">
-            <mat-checkbox (click)="addPerfil(0)" class="margin">Administrador</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(1)"  class="margin">Motoboy</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(2)" [checked]="true" class="margin">Estabelecimento</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin">Administrador</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin">Motoboy</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin">Motoboy</mat-checkbox>
             
         </section>
 
@@ -19,13 +19,10 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Nome</mat-label>
               <input 
-              [(ngModel)]="estabelecimento.nome"
+              [(ngModel)]="motoboy.nome"
               name="nome"
-              [formControl]="nome"
-              required
-              matInput 
-              placeholder="EX... Gabriel"
-              maxlength="50">
+              [disabled]="true"
+              matInput>
               <mat-icon matSuffix>badge</mat-icon>
               
             </mat-form-field>
@@ -33,13 +30,10 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>CPF</mat-label>
               <input 
-              [(ngModel)]="estabelecimento.cpf"
+              [(ngModel)]="motoboy.cpf"
               name="cpf"
-              [formControl]="cpf"
-              required
-              matInput 
-              placeholder="EX... 000.000.000-00"
-              mask="000.000.000-00">
+              [disabled]="true"
+              matInput>
               <mat-icon matSuffix>verified user</mat-icon>
               
             </mat-form-field>
@@ -47,12 +41,10 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>E-mail</mat-label> 
               <input
-              [(ngModel)]="estabelecimento.email"
+              [(ngModel)]="motoboy.email"
               name="email" 
-              [formControl]="email"
-              required
-              matInput 
-              placeholder="EX... fulano@gmail.com">
+              [disabled]="true"
+              matInput>
               <mat-icon matSuffix>alternate_email</mat-icon>
               
             </mat-form-field>
@@ -60,17 +52,15 @@
             <mat-form-field class="fullWidth" appearance="legacy">
               <mat-label>Senha</mat-label>
               <input
-              [(ngModel)]="estabelecimento.senha"
+              [(ngModel)]="motoboy.senha"
               name="senha"
-              [formControl]="senha"
-              required="password"
+              [disabled]="true"
               type="password"
-              matInput 
-              placeholder="EX... 1234">
+              matInput>
               <mat-icon matSuffix>vpn_key</mat-icon>
               
             </mat-form-field>
-            <button (click)="update()" [disabled] ="!validaCampos()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Atualizar</button>
+            <button (click)="delete()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Deletar</button>
             <button routerLink="../../" class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
           <br>
     </form>

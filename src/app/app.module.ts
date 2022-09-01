@@ -39,6 +39,10 @@ import { EstabelecimentoCreateComponent } from './components/estabelecimento/est
 import { NgxMaskModule } from 'ngx-mask';
 import { EstabelecimentoUpdateComponent } from './components/estabelecimento/estabelecimento-update/estabelecimento-update.component';
 import { EstabelecimentoDeleteComponent } from './components/estabelecimento/estabelecimento-delete/estabelecimento-delete.component';
+import { MotoboyCreateComponent } from './components/motoboy/motoboy-create/motoboy-create.component';
+import { MotoboyListComponent } from './components/motoboy/motoboy-list/motoboy-list.component';
+import { MotoboyDeleteComponent } from './components/motoboy/motoboy-delete/motoboy-delete.component';
+import { MotoboyUpdateComponent } from './components/motoboy/motoboy-update/motoboy-update.component';
 
 
 @NgModule({ 
@@ -49,7 +53,13 @@ import { EstabelecimentoDeleteComponent } from './components/estabelecimento/est
     HeaderComponent,
     EstabelecimentoListComponent,
     LoginComponent, 
-    EstabelecimentoCreateComponent, EstabelecimentoUpdateComponent, EstabelecimentoDeleteComponent
+    EstabelecimentoCreateComponent, 
+    EstabelecimentoUpdateComponent, 
+    EstabelecimentoDeleteComponent,
+    MotoboyCreateComponent,
+    MotoboyListComponent,
+    MotoboyDeleteComponent,
+    MotoboyUpdateComponent
   ],
   imports: [
     BrowserModule,

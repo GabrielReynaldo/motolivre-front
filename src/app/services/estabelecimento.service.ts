@@ -25,6 +25,6 @@ export class EstabelecimentoService {
     return this.http.put<Estabelecimento   >(`${API_CONFIG.baseUrl}/estabelecimentos/${estabelecimento.id}`,estabelecimento);
   }
   delete(id: any): Observable<Estabelecimento> {
-    return this.http.delete<Estabelecimento>(`${API_CONFIG.baseUrl}/Estabelecimento/${id}`);
+    return this.http.delete<Estabelecimento>(`${API_CONFIG.baseUrl}/estabelecimentos/${id}`);
   }
 }
