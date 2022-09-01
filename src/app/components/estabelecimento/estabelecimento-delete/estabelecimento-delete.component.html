@@ -1,1 +1,70 @@
-<p>estabelecimento-delete works!</p>
+<div class="comtainer mat-elevation-z8" >
+    <form class="form">
+      <br>
+        <h1 class="fullWidth">Deletar Estabelecimento</h1>
+        <br>
+        <img class="fullWidth" src="assets/img/loginusuario.svg" alt="Help Desk Dicas de um DEV">
+
+        <br>
+        <br>
+        <br>
+        <section class="section">
+            <mat-checkbox [disabled]="true" class="margin">Administrador</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin">Motoboy</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin">Estabelecimento</mat-checkbox>
+            
+        </section>
+
+        
+            <mat-form-field class="fullWidth" appearance="legacy">
+              <mat-label>Nome</mat-label>
+              <input 
+              [(ngModel)]="estabelecimento.nome"
+              name="nome"
+              [disabled]="true"
+              matInput>
+              <mat-icon matSuffix>badge</mat-icon>
+              
+            </mat-form-field>
+            
+            <mat-form-field class="fullWidth" appearance="legacy">
+              <mat-label>CPF</mat-label>
+              <input 
+              [(ngModel)]="estabelecimento.cpf"
+              name="cpf"
+              [disabled]="true"
+              matInput>
+              <mat-icon matSuffix>verified user</mat-icon>
+              
+            </mat-form-field>
+         
+            <mat-form-field class="fullWidth" appearance="legacy">
+              <mat-label>E-mail</mat-label> 
+              <input
+              [(ngModel)]="estabelecimento.email"
+              name="email" 
+              [disabled]="true"
+              matInput>
+              <mat-icon matSuffix>alternate_email</mat-icon>
+              
+            </mat-form-field>
+         
+            <mat-form-field class="fullWidth" appearance="legacy">
+              <mat-label>Senha</mat-label>
+              <input
+              [(ngModel)]="estabelecimento.senha"
+              name="senha"
+              [disabled]="true"
+              matInput>
+              <mat-icon matSuffix>vpn_key</mat-icon>
+              
+            </mat-form-field>
+            <button (click)="delete()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Deletar</button>
+            <button routerLink="../../" class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
+          <br>
+    </form>
+    <br>
+</div>
+<body>
+  <br><br><br><br>
+</body>
