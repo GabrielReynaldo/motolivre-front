@@ -29,3 +29,6 @@ table {
   .delete{
     color: red;
   }
+  a{
+    margin-right: 2rem;
+  }
