@@ -5,14 +5,18 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Titulo do Chamado</mat-label>
-          <input matInput placeholder="Ex. Ir no Carlão" >
+          <input 
+          [formControl]="titulo" 
+          required
+          matInput 
+          placeholder="Ex. Ir no Carlão" >
         </mat-form-field>      
     </form>
 
     <div class="status-prioridade">
         <mat-form-field appearance="outline">
             <mat-label>Status</mat-label>
-            <mat-select>
+            <mat-select [formControl]="status" required >
               <mat-option value="0">Aberto</mat-option>
               <mat-option value="1">Andamento</mat-option>
               <mat-option value="2">Encerrado</mat-option>
@@ -21,7 +25,7 @@
 
           <mat-form-field appearance="outline">
             <mat-label>Prioridade</mat-label>
-            <mat-select>
+            <mat-select [formControl]="prioridade" required>
               <mat-option value="0">Baixa</mat-option>
               <mat-option value="1">Media</mat-option>
               <mat-option value="2">Alta</mat-option>
@@ -32,7 +36,7 @@
     <div class="estabelecimento">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um Estabelecimento</mat-label>
-            <mat-select>
+            <mat-select [formControl]="estabelecimento" required>
               <mat-option value="0">Gabriel</mat-option>
             </mat-select>
           </mat-form-field>
@@ -41,7 +45,7 @@
     <div class="motoboy">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um Motoboy</mat-label>
-            <mat-select>
+            <mat-select [formControl]="motoboy" required>
               <mat-option value="0">Alberto</mat-option>
             </mat-select>
           </mat-form-field>
@@ -50,11 +54,17 @@
     <form class="form">      
         <mat-form-field class="full-width " appearance="outline">
           <mat-label>Qual horario do serviço</mat-label>
-          <textarea class="descricao" matInput placeholder="Ex. Das 19:00 as 23:00"></textarea>
+          <textarea 
+          [formControl]="descricao"
+           required
+          class="descricao" 
+          matInput 
+          placeholder="Ex. Das 19:00 as 23:00"></textarea>
         </mat-form-field>
     </form>
 
-    <button class="add mat-elevation-z8" mat-raised-button color="primary">Adicionar</button>
+    <button [disabled]="!validaCampos()" class="add mat-elevation-z8" mat-raised-button color="primary">Adicionar</button>
+    
     <button class="home mat-elevation-z8" mat-fab color="warn" >
           <mat-icon>home</mat-icon>
     </button>
