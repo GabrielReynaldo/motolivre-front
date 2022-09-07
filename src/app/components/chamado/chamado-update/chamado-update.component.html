@@ -17,7 +17,7 @@
 
     <div class="status-prioridade">
         <mat-form-field appearance="outline">
-            <mat-label>Status</mat-label>
+            <mat-label>{{retornaStatus(chamado.status)}}</mat-label>
             <mat-select 
             [(ngModel)]="chamado.status"
             name="status"
@@ -30,7 +30,7 @@
           </mat-form-field>
 
           <mat-form-field appearance="outline">
-            <mat-label>Prioridade</mat-label>
+            <mat-label>{{retornaPrioridade(chamado.prioridade)}}</mat-label>
             <mat-select 
             [(ngModel)]="chamado.prioridade"
              name="prioridade"
@@ -45,7 +45,7 @@
 
     <div class="estabelecimento">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Selecione um Estabelecimento</mat-label>
+            <mat-label>{{chamado.nomeEstabelecimento}}</mat-label>
             <mat-select
             [(ngModel)]="chamado.estabelecimento"
              name="estabelecimento" 
@@ -58,7 +58,7 @@
 
     <div class="motoboy">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Selecione um Motoboy</mat-label>
+            <mat-label>{{chamado.nomeMotoboy}}</mat-label>
             <mat-select 
             [(ngModel)]="chamado.motoboy"
            name="motoboy"
@@ -83,11 +83,9 @@
         </mat-form-field>
     </form>
 
-    <button (click)="create()" [disabled]="!validaCampos()" class="add mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+    <button (click)="update()" [disabled]="!validaCampos()" class="add mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
     
-    <button routerLink="../" class="home mat-elevation-z8" mat-fab color="warn" >
-          <mat-icon>home</mat-icon>
-    </button>
+    <button routerLink="../" class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
 
     <p class="full-width ">Desenvolvido by allne</p>
 </div>
