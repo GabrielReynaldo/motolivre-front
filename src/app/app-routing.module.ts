@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { EstabelecimentoCreateComponent } from './components/estabelecimento/estabelecimento-create/estabelecimento-create.component';
 import { EstabelecimentoDeleteComponent } from './components/estabelecimento/estabelecimento-delete/estabelecimento-delete.component';
 import { EstabelecimentoListComponent } from './components/estabelecimento/estabelecimento-list/estabelecimento-list.component';
@@ -28,13 +29,14 @@ const routes: Routes = [
       {path: 'estabelecimentos/delete/:id',     component: EstabelecimentoDeleteComponent},
 
 
-      {path: 'motoboy',                         component: MotoboyListComponent},
-      {path: 'motoboy/create', component: MotoboyCreateComponent},
-      {path: 'motoboy/update/:id', component: MotoboyUpdateComponent},
-      {path: 'motoboy/delete/:id', component: MotoboyDeleteComponent},
+      {path: 'motoboy',                                   component: MotoboyListComponent},
+      {path: 'motoboy/create',                          component: MotoboyCreateComponent},
+      {path: 'motoboy/update/:id',                      component: MotoboyUpdateComponent},
+      {path: 'motoboy/delete/:id',                      component: MotoboyDeleteComponent},
 
-      {path: 'chamados', component: ChamadoListComponent},
-      {path: 'chamados/create', component: ChamadoCreateComponent},
+      {path: 'chamados',                                  component: ChamadoListComponent},
+      {path: 'chamados/create',                         component: ChamadoCreateComponent},
+      {path: 'chamados/update/:id',                     component: ChamadoUpdateComponent},
     ]
   }
   
