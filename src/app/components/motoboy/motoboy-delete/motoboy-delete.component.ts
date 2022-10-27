@@ -42,7 +42,7 @@ export class MotoboyDeleteComponent implements OnInit {
   }
 
   delete(): void{
-    this.service.delete(this.motoboy).subscribe(()=>{
+    this.service.delete(this.motoboy.id).subscribe(()=>{
       this.toast.success('Motoboy Deletado com sucesso', 'Delete');
       this.router.navigate(['motoboys'])
     },ex => {

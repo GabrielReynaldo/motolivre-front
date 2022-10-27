@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MotoboyCreateComponent } from './components/motoboy/motoboy-create/motoboy-create.component';
 import { MotoboyDeleteComponent } from './components/motoboy/motoboy-delete/motoboy-delete.component';
+import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motoboy-front.component';
 import { MotoboyListComponent } from './components/motoboy/motoboy-list/motoboy-list.component';
 import { MotoboyUpdateComponent } from './components/motoboy/motoboy-update/motoboy-update.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -21,8 +22,9 @@ import { NavComponent } from './components/nav/nav.component';
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {
-    path: '', component: NavComponent, canActivate: [AuthGuard], children: [
-      { path: 'home', component: HomeComponent },
+    path: '', component: NavComponent, canActivate: [AuthGuard], children: 
+    [
+      {path: 'home', component: HomeComponent },
 
       {path: 'estabelecimentos',                  component: EstabelecimentoListComponent},
       {path: 'estabelecimentos/create',         component: EstabelecimentoCreateComponent},
@@ -34,12 +36,13 @@ const routes: Routes = [
       {path: 'motoboy/create',                          component: MotoboyCreateComponent},
       {path: 'motoboy/update/:id',                      component: MotoboyUpdateComponent},
       {path: 'motoboy/delete/:id',                      component: MotoboyDeleteComponent},
+      {path: 'motoboy/front',                      component: MotoboyFrontComponent},
 
       {path: 'chamados',                                  component: ChamadoListComponent},
       {path: 'chamados/create',                         component: ChamadoCreateComponent},
       {path: 'chamados/update/:id',                     component: ChamadoUpdateComponent},
       {path: 'chamados/read/:id',                     component: ChamadoReadComponent},
-    ]
+    ],
   }
   
 ];

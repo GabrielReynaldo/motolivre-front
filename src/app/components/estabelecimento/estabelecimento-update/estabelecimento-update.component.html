@@ -10,7 +10,7 @@
         <br>
         <section class="section">
             <mat-checkbox (click)="addPerfil(0)" class="margin">Administrador</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(1)"  class="margin">Motoboy</mat-checkbox>
+            
             <mat-checkbox (click)="addPerfil(2)" [checked]="true" class="margin">Estabelecimento</mat-checkbox>
             
         </section>
@@ -70,7 +70,7 @@
               <mat-icon matSuffix>vpn_key</mat-icon>
               
             </mat-form-field>
-            <button (click)="update()" [disabled] ="!validaCampos()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Atualizar</button>
+            <button routerLink="../../" (click)="update()" [disabled] ="!validaCampos()" class="fullWidth" mat-elevation-z8 mat-flat-button color="primary">Atualizar</button>
             <button routerLink="../../" class="fullWidth" mat-elevation-z8 mat-flat-button color="warn">Cancelar</button>
           <br>
     </form>

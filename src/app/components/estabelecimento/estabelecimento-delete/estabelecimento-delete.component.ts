@@ -42,7 +42,7 @@ export class EstabelecimentoDeleteComponent implements OnInit {
   }
 
   delete(): void{
-    this.service.delete(this.estabelecimento).subscribe(()=>{
+    this.service.delete(this.estabelecimento.id).subscribe(()=>{
       this.toast.success('Estabelecimento Deletado com sucesso', 'Delete');
       this.router.navigate(['estabelecimentos'])
     },ex => {
@@ -50,7 +50,7 @@ export class EstabelecimentoDeleteComponent implements OnInit {
       if(ex.error.errors){
         ex.error.errors.forEach(element => {
           this.toast.error(element.message); 
-          
+          this.toast.success('Erro ao deletar', 'Delete');
         });
       }else{
         this.toast.error(ex.error.message);
