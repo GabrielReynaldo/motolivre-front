@@ -48,6 +48,7 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motoboy-front.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 
 @NgModule({ 
@@ -69,7 +70,8 @@ import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motobo
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
     ChamadoReadComponent,
-    MotoboyFrontComponent
+    MotoboyFrontComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@ const routes: Routes = [
 
 
       {path: 'motoboy',                                   component: MotoboyListComponent},
-      {path: 'motoboy/create',                          component: MotoboyCreateComponent},
+       
       {path: 'motoboy/update/:id',                      component: MotoboyUpdateComponent},
       {path: 'motoboy/delete/:id',                      component: MotoboyDeleteComponent},
       {path: 'motoboy/front',                      component: MotoboyFrontComponent},
@@ -43,7 +43,8 @@ const routes: Routes = [
       {path: 'chamados/update/:id',                     component: ChamadoUpdateComponent},
       {path: 'chamados/read/:id',                     component: ChamadoReadComponent},
     ],
-  }
+  },
+  {path: 'motoboy/create',                          component: MotoboyCreateComponent}, 
   
 ];
 
