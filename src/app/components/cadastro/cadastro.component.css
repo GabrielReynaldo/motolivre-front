@@ -1,38 +1,81 @@
-.base{
-    background-color: black;
-}
-.comtainer{
-    width: 30rem;
-    margin: 3rem auto  ;
-    padding: 1rem 1 rem 3 rem 1rem;
-    border-radius: .6rem;
+.container{
+    height: 100%;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 68%);
-    
-}
-.fullWidth{
-    width: 94%;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-h1{
-    text-align: center;
-   
-    border-radius: .6rem;
-}
-img{
-    height: 6rem;
-    margin: auto;
-}
-.section{
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
+.form{
+    width: 25rem;
+    margin: auto;
+    background-color:rgb(206, 203, 203);
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+
+}
+
+img{
+    height: 9rem;
+    width: 50%;
+    margin-left: 6rem; 
+    margin-top: 1rem;  
+}
+
+
+  .bloco {
+    width: 400px;
+    margin: 15px;
+  }
+  .bloco img{
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+  }
+  .bloco img:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+  }
+
+
+.full-width{
+    width: 100%;
+    margin-top: 0.5rem;
+    color: black; 
+}
+
 button{
-    margin-top: 1rem 1rem 1rem  1rem;
+    margin-top: 1.5rem;
+
+}
+.texto{
+    color: black;
 }
 p{
-    margin: 2rem 3rem 1rem 1rem;
+    margin-top: 1rem;
 }
+  h1 {
+    color: #380ff1;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+   
+  
+  p {
+    color: #0d0b01;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 20px;
+    
+  } 
+  mat-icon{
+    color: #380ff1;
+    padding: 20px;
+  }
+  

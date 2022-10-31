@@ -1,20 +1,35 @@
-<div class="base">
-<div class="comtainer mat-elevation-z8" >
-    <form class="form">
-      <br>
-        <h1 class="fullWidth">Bem-Vindo</h1>
-        <br>
-        <img class="fullWidth" src="assets/img/loginusuario.svg" alt="Help Desk Dicas de um DEV">
-        
-        <p>Aqui você que ira me dizer qual vai ser sua escolha em nosso Aplicativo, queremos saber se você
-            vai ser um ENTREGADOR ou um ESTABELECIMENTO, por favor selecione a opção desejada para proceguir 
-        </p>
-        <p>te</p>
-        
-        <button routerLink="../motoboy/create" mat-stroked-button color="black" class="mat-elevation-z10"><b> Motoboy</b></button>
+<div class="container ">
+    <form class="form mat-elevation-z8">
 
+        <h1>Motolivre</h1>
+      
 
+        <div class="bloco">
+         <img src="assets/img/moto1.svg" alt="Image size" title="Image size" />
+       </div>
+
+        
+
+        <mat-form-field  class="full-width" appearance="outline">
+          <mat-label>Motoboy</mat-label>
+          <input 
+          matInput 
+          placeholder="Clique no icone para ir a pagina de cadastrose você deseja ser um entregador e prestar serviços de entrega para empresas  ">
+          <mat-icon routerLink="../motoboy/create" matSuffix>motorcycle</mat-icon>
+       </mat-form-field>
+ 
+       <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Estabelecimento</mat-label>
+          <input 
+          matInput 
+          placeholder="Ex. 123">
+          <mat-icon  matSuffix>account_balance</mat-icon>
+       </mat-form-field>
+       <button  routerLink="../motoboy/create" mat-stroked-button color="black" class="mat-elevation-z10"><b>Novo Motoboy</b></button>
+ 
+      
+
+   
     </form>
-    
-</div>
 
+  </div>
