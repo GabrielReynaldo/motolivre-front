@@ -1,9 +1,14 @@
 <div class="container ">
     <form class="form mat-elevation-z8">
 
-        <h1>Motolivre - Bem-Vindo </h1>
+        <h1>Motolivre</h1>
+        <h1>Bem-Vindo</h1>
 
-        <img src="assets/img/moto1.svg" alt="">
+        <div class="bloco">
+         <img src="assets/img/moto1.svg" alt="Image size" title="Image size" />
+       </div>
+
+        
 
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>E-mail</mat-label>
@@ -30,8 +35,11 @@
           <mat-icon matSuffix>password</mat-icon>
        </mat-form-field>
  
-       <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
-       <button routerLink="../motoboy/create" mat-stroked-button color="black" class="mat-elevation-z10"><b>Novo Motoboy</b></button>
+ 
+      <button (click)="logar()" [disabled]="!validaCampos()" class=" btn fifth">Login</button>
+
+       <p>Não é cadastrado ? - <a routerLink="../cadastro">Clique Aqui</a></p>
+       
     </form>
 
   </div>

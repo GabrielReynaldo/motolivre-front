@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: 
     [
       {path: 'home', component: HomeComponent },
+      
 
       {path: 'estabelecimentos',                  component: EstabelecimentoListComponent},
       {path: 'estabelecimentos/create',         component: EstabelecimentoCreateComponent},
@@ -45,7 +47,7 @@ const routes: Routes = [
     ],
   },
   {path: 'motoboy/create',                          component: MotoboyCreateComponent}, 
-  
+  {path: 'cadastro', component: CadastroComponent},
 ];
 
 @NgModule({
