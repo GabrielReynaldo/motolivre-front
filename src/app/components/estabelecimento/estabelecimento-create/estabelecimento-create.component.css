@@ -1,8 +1,16 @@
 .comtainer{
-    width: 30rem;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 68%);
+    height: 100%;
     margin: auto;
     padding: 1rem 1 rem 3 rem 1rem;
-    border-radius: .6rem;
+    
+}
+.form{
+    width: 25rem;
+    margin: auto;
+    background-color:rgb(206, 203, 203);
+    padding: 4rem 1rem;
+    border-radius: 1rem;
 }
 .fullWidth{
     width: 94%;
@@ -11,7 +19,6 @@
 }
 h1{
     text-align: center;
-   
     border-radius: .6rem;
 }
 img{
@@ -26,5 +33,5 @@ img{
     justify-content: space-between;
 }
 button{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }

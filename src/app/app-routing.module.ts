@@ -29,13 +29,11 @@ const routes: Routes = [
       
 
       {path: 'estabelecimentos',                  component: EstabelecimentoListComponent},
-      {path: 'estabelecimentos/create',         component: EstabelecimentoCreateComponent},
       {path: 'estabelecimentos/update/:id',     component: EstabelecimentoUpdateComponent},
       {path: 'estabelecimentos/delete/:id',     component: EstabelecimentoDeleteComponent},
 
 
       {path: 'motoboy',                                   component: MotoboyListComponent},
-       
       {path: 'motoboy/update/:id',                      component: MotoboyUpdateComponent},
       {path: 'motoboy/delete/:id',                      component: MotoboyDeleteComponent},
       {path: 'motoboy/front',                      component: MotoboyFrontComponent},
@@ -48,6 +46,7 @@ const routes: Routes = [
   },
   {path: 'motoboy/create',                          component: MotoboyCreateComponent}, 
   {path: 'cadastro', component: CadastroComponent},
+  {path: 'estabelecimentos/create',         component: EstabelecimentoCreateComponent},
 ];
 
 @NgModule({
