@@ -10,11 +10,19 @@ export class AvaliacaoService {
 
   constructor(private http: HttpClient) { }
 
+  findById(id: any): Observable<Avaliacao> {
+    return this.http.get<Avaliacao>(`${API_CONFIG.baseUrl}/avaliacao/${id}`);
+  }
+
   findAll(): Observable<Avaliacao[]> {
     return this.http.get<Avaliacao[]>(`${API_CONFIG.baseUrl}/avaliacao`);
   }
 
   create(avaliacao: Avaliacao): Observable<Avaliacao> {
     return this.http.post<Avaliacao>(`${API_CONFIG.baseUrl}/avaliacao`, avaliacao);
+  }
+
+  update(avaliacao: Avaliacao): Observable<Avaliacao> {
+    return this.http.put<Avaliacao>(`${API_CONFIG.baseUrl}/avaliacao/${avaliacao.id}`, avaliacao);
   }
 }
