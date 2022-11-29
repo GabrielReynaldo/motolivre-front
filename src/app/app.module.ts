@@ -51,6 +51,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
 import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motoboy-front.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { AvaliacaoListComponent } from './components/avaliacao/avaliacao-list/avaliacao-list.component';
+import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-create/avaliacao-create.component';
 
 
 
@@ -78,6 +79,7 @@ import { AvaliacaoListComponent } from './components/avaliacao/avaliacao-list/av
     MotoboyFrontComponent,
     CadastroComponent,
     AvaliacaoListComponent,
+    AvaliacaoCreateComponent,
     
   ],
   imports: [
