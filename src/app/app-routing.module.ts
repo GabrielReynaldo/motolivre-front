@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-create/avaliacao-create.component';
 import { AvaliacaoListComponent } from './components/avaliacao/avaliacao-list/avaliacao-list.component';
+import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
@@ -46,9 +47,11 @@ const routes: Routes = [
       {path: 'chamados/read/:id',                     component: ChamadoReadComponent},
     
       {path: 'avaliacao' , component: AvaliacaoListComponent},
-      {path: 'avaliacao/create' , component: AvaliacaoCreateComponent}
+      {path: 'avaliacao/create' , component: AvaliacaoCreateComponent},
+      {path: 'avaliacao/update/:id' , component: AvaliacaoUpdateComponent},
     ],
   },
+
   
   {path: 'motoboy/create',                          component: MotoboyCreateComponent}, 
   {path: 'cadastro', component: CadastroComponent},
