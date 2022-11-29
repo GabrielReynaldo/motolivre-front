@@ -50,6 +50,7 @@ import { ChamadoUpdateComponent } from './components/chamado/chamado-update/cham
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motoboy-front.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { AvaliacaoListComponent } from './components/avaliacao/avaliacao-list/avaliacao-list.component';
 
 
 
@@ -76,6 +77,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     ChamadoReadComponent,
     MotoboyFrontComponent,
     CadastroComponent,
+    AvaliacaoListComponent,
     
   ],
   imports: [
