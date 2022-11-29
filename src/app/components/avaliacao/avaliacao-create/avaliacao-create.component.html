@@ -1,1 +1,95 @@
-<p>avaliacao-create works!</p>
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Criando Avaliação</h1>
+    <img class="full-width" src="assets/img/chamado-create.svg" alt="chamado-create">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Defeito</mat-label>
+          <input 
+          [(ngModel)]="avaliacao.defeito"
+          name="defeito"
+          [formControl]="defeito" 
+          required
+          matInput 
+          placeholder="Ex. Ir no Carlão" >
+        </mat-form-field>      
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Qualidade</mat-label>
+          <input 
+          [(ngModel)]="avaliacao.qualidade"
+          name="qualidade"
+          [formControl]="qualidade" 
+          required
+          matInput 
+          placeholder="Ex. Ir no Carlão" >
+        </mat-form-field>      
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Algo que possa melhorar</mat-label>
+          <input 
+          [(ngModel)]="avaliacao.melhora"
+          name="melhora"
+          [formControl]="melhora" 
+          required
+          matInput 
+          placeholder="Ex. Ir no Carlão" >
+        </mat-form-field>      
+    </form>
+
+
+
+
+    <div class="estabelecimento">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Estabelecimento</mat-label>
+            <mat-select
+            [(ngModel)]="avaliacao.estabelecimento"
+             name="estabelecimento" 
+            [formControl]="estabelecimento" 
+            required>
+              <mat-option *ngFor="let est of estabelecimentos" value="{{est.id}}">{{est.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <div class="motoboy">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Selecione um Motoboy</mat-label>
+            <mat-select 
+            [(ngModel)]="avaliacao.motoboy"
+           name="motoboy"
+            [formControl]="motoboy" 
+            required>
+              <mat-option *ngFor="let mot of motoboys" value="{{mot.id}}">{{mot.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <form class="form">      
+        <mat-form-field class="full-width " appearance="outline">
+          <mat-label>Deixe uma observação</mat-label>
+          <textarea
+          [(ngModel)]="avaliacao.observacao"
+          name="observacoes" 
+          [formControl]="observacao"
+           required
+          class="observacoes" 
+          matInput 
+          placeholder="Ex. Das 19:00 as 23:00"></textarea>
+        </mat-form-field>
+    </form>
+
+    <button (click)="create()" [disabled]="!validaCampos()" class="add mat-elevation-z8" mat-raised-button color="primary">Adicionar</button>
+    
+    <button routerLink="../" class="home mat-elevation-z8" mat-fab color="warn" >
+          <mat-icon>home</mat-icon>
+    </button>
+
+    <p class="full-width ">Desenvolvido by allne</p>
+</div>
+

@@ -13,4 +13,8 @@ export class AvaliacaoService {
   findAll(): Observable<Avaliacao[]> {
     return this.http.get<Avaliacao[]>(`${API_CONFIG.baseUrl}/avaliacao`);
   }
+
+  create(avaliacao: Avaliacao): Observable<Avaliacao> {
+    return this.http.post<Avaliacao>(`${API_CONFIG.baseUrl}/avaliacao`, avaliacao);
+  }
 }
