@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
+
 export class CadastroComponent implements OnInit {
-
-  constructor() { }
-
+    constructor() { }
+    panelOpenState = false;
   ngOnInit(): void {
   }
 
 }
+

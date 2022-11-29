@@ -26,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 //componentes de projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -51,6 +52,9 @@ import { MotoboyFrontComponent } from './components/motoboy/motoboy-front/motobo
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 
+
+
+
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -71,7 +75,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     ChamadoUpdateComponent,
     ChamadoReadComponent,
     MotoboyFrontComponent,
-    CadastroComponent
+    CadastroComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -102,7 +107,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
       closeButton:true,
       progressBar:true
     }),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MatExpansionModule
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

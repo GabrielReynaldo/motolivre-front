@@ -10,26 +10,56 @@
 
         
 
-        <mat-form-field  class="full-width" appearance="outline">
+        <!--<mat-form-field  class="full-width" appearance="outline">
           <mat-label>Motoboy</mat-label>
           <input 
           matInput 
-          placeholder="Clique no icone para ir a pagina de cadastrose você deseja ser um entregador e prestar serviços de entrega para empresas  ">
+          placeholder="Clique no icone para ir a pagina de cadastro se você deseja ser um entregador e prestar serviços de entrega para empresas  ">
           <mat-icon routerLink="../motoboy/create" matSuffix>motorcycle</mat-icon>
        </mat-form-field>
- 
-       <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Estabelecimento</mat-label>
-          <input 
-          matInput 
-          placeholder="Ex. 123">
-          <mat-icon  matSuffix>account_balance</mat-icon>
-       </mat-form-field>
-       <button  routerLink="../estabelecimentos/create" mat-stroked-button color="black" class="mat-elevation-z10"><b>Novo Motoboy</b></button>
- 
-      
+       <mat-form-field  class="full-width" appearance="outline">
+         <mat-label>Estabelecimento</mat-label>
+         <input 
+         matInput 
+         placeholder="Clique no icone para ir a pagina de cadastrose você deseja ser um entregador e prestar serviços de entrega para empresas  ">
+         <mat-icon routerLink="../estabelecimentos/create" matSuffix>motorcycle</mat-icon>
+      </mat-form-field>-->
 
-   
+      <mat-accordion>
+    
+        <mat-expansion-panel class="noop" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              MOTOBOY
+            </mat-panel-title>
+            <mat-panel-description>
+              Clique para mais Informação 
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Clique no icone para ir a pagina de cadastro se você deseja ser um entregador e prestar serviços de entrega para empresas </p>
+          <button mat-stroked-button routerLink="../motoboy/create" color="primary">Cadastro</button>
+        </mat-expansion-panel>
+
+        <br>
+        
+        <mat-expansion-panel class="noop" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              ESTABELECIMENTO
+            </mat-panel-title>
+            <mat-panel-description>
+              Clique para mais Informação 
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Clique no icone para ir a pagina de cadastro se você tem uma empresa e deseja ter serviços de entregadores.</p>
+          <button mat-stroked-button routerLink="../estabelecimentos/create" color="primary">Cadastro</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+      
+      
     </form>
 
   </div>
+  

@@ -44,6 +44,7 @@ const routes: Routes = [
       {path: 'chamados/read/:id',                     component: ChamadoReadComponent},
     ],
   },
+  
   {path: 'motoboy/create',                          component: MotoboyCreateComponent}, 
   {path: 'cadastro', component: CadastroComponent},
   {path: 'estabelecimentos/create',         component: EstabelecimentoCreateComponent},

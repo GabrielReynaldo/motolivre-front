@@ -78,4 +78,7 @@ p{
     color: #380ff1;
     padding: 20px;
   }
-  
+  .noop{
+    margin-left: 8px;
+    background-color: rgb(124, 163, 163);
+  }
